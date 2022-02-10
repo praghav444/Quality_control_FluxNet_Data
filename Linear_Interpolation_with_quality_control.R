@@ -3,7 +3,7 @@ library(lubridate)
 library(dplyr)
 #------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------
-df <- read_xlsx('C://Users/ppushpendra.STUDENT/Downloads/AMF_US-A32_BASE_HH_1-5.xlsx')
+df <- read_xlsx('~/Downloads/AMF_US-A32_BASE_HH_1-5.xlsx')
 df[df==-9999] <- NA
 df$DateTime <- strptime(df$TIMESTAMP_END, format = "%Y%m%d%H%M")
 df$imbalance <- abs(df$NETRAD - df$G_1_1_1 -  df$LE - df$H)
